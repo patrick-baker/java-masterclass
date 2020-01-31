@@ -9,6 +9,10 @@ public class Main {
         System.out.println("FirstLastDigitSum of 193 = " + FirstLastDigitSum.sumFirstAndLastDigit(193));
         System.out.println("FirstLastDigitSum of -7 = " + FirstLastDigitSum.sumFirstAndLastDigit(-7));
         System.out.println("FirstLastDigitSum of 0 = " + FirstLastDigitSum.sumFirstAndLastDigit(0));
+        System.out.println("EvenDigitSum of 3 = " + EvenDigitSum.getEvenDigitSum(3));
+        System.out.println("EvenDigitSum of -56 = " + EvenDigitSum.getEvenDigitSum(-56));
+        System.out.println("EvenDigitSum of 195478 = " + EvenDigitSum.getEvenDigitSum(195478));
+        System.out.println("EvenDigitSum of 24 = " + EvenDigitSum.getEvenDigitSum(24));
     }
 
 }

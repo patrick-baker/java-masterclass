@@ -16,6 +16,7 @@ public class Main {
         System.out.println("PerfectNumber of 7" + PerfectNumber.isPerfectNumber(7));
         NumberToWords.numberToWords(567);
         NumberToWords.numberToWords(004);
+        DiagonalStar.printSquareStar(10);
     }
 
 }

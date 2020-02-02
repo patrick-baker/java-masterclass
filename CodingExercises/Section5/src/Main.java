@@ -14,6 +14,8 @@ public class Main {
         System.out.println("EvenDigitSum of 195478 = " + EvenDigitSum.getEvenDigitSum(195478));
         System.out.println("EvenDigitSum of 24 = " + EvenDigitSum.getEvenDigitSum(24));
         System.out.println("PerfectNumber of 7" + PerfectNumber.isPerfectNumber(7));
+        NumberToWords.numberToWords(567);
+        NumberToWords.numberToWords(004);
     }
 
 }

@@ -17,6 +17,8 @@ public class Main {
         NumberToWords.numberToWords(567);
         NumberToWords.numberToWords(004);
         DiagonalStar.printSquareStar(10);
+        System.out.println(PaintJob.getBucketCount(3.4, 2.1, 1.5, 2));
+        System.out.println(PaintJob.getBucketCount(2.75, 3.25, 2.5, 1));
     }
 
 }

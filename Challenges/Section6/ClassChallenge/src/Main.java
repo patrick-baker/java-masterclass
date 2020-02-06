@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Account balance = " + bankAccount1.getBalance());
         bankAccount1.withdrawFunds(50000);
         System.out.println("Account balance = " + bankAccount1.getBalance());
-        
+
 
         System.out.println("To VIP account");
         VipCustomer VipCustomer1 = new VipCustomer();

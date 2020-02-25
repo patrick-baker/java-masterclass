@@ -25,6 +25,10 @@ public class MobilePhone {
             System.out.println(oldContact.getName() + " was not found.");
             return false;
         }
+        if (queryContact(newContact.getName()) != null) {
+            System.out.println("That contact already exists in the contact list.");
+            return false;
+        }
         this.contactList.set(foundPosition, newContact);
         System.out.println(oldContact.getName() + " was replaced by " + newContact.getName());
         return true;
@@ -42,13 +46,6 @@ public class MobilePhone {
             }
         }
         return -1;
-    }
-
-    public String queryContact(Contact contact) {
-        if (findContact(contact) > 0) {
-            return contact.getName();
-        }
-        return null;
     }
 
     public Contact queryContact(String name) {
@@ -75,9 +72,5 @@ public class MobilePhone {
         this.contactList.remove(foundPosition);
         System.out.println(contact.getName() + " was deleted.");
         return true;
-    }
-
-    public void removeContact (int position) {
-        contactList.remove(position);
     }
 }

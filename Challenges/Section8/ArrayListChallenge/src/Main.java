@@ -46,10 +46,6 @@ public class Main {
     private static void addNewContact() {
         System.out.println("Enter new contact name: ");
         String name = scanner.nextLine();
-        if (mobilePhone.queryContact(name) != null) {
-            System.out.println("That name already exists in the contact list.");
-            return;
-        }
         System.out.println("Enter phone number: ");
         String number = scanner.nextLine();
         Contact newContact = Contact.createContact(name, number);
@@ -71,10 +67,6 @@ public class Main {
         }
         System.out.println("Enter new contact name: ");
         String newName = scanner.nextLine();
-        if (mobilePhone.queryContact(newName) != null) {
-            System.out.println("That name already exists in the contact list.");
-            return;
-        }
         System.out.println("Enter new contact phone number");
         String newNumber = scanner.nextLine();
         Contact newContact = Contact.createContact(newName, newNumber);

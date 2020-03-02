@@ -18,16 +18,19 @@ public class Branch {
         return branchName;
     }
 
-    public boolean addCustomer (Customer customer, double initialTransaction) {
-        if (findCustomer(customer.getName()) >= 0) {
+    // could cut out a line by simply creating a newInstance of Customer when adding to customerList
+    public boolean addCustomer (String customerName, double initialTransaction) {
+        if (findCustomer(customerName) >= 0) {
             System.out.println("That customer already exists at " + this.branchName);
             return false;
         }
-        customerList.add(customer);
-        System.out.println(customer.getName() + " was added to " + this.branchName);
-        customer.newTransaction(initialTransaction);
+        Customer newCustomer = Customer.createCustomer(customerName);
+        customerList.add(newCustomer);
+        System.out.println(customerName + " was added to " + this.branchName);
+        newCustomer.newTransaction(initialTransaction);
         return true;
     }
+
 
     public boolean newTransaction (Customer customer, double transactionAmount) {
         if (queryCustomer(customer.getName()) != null) {
@@ -39,10 +42,7 @@ public class Branch {
         return false;
     }
 
-    private int findCustomer (Customer customer) {
-        return this.customerList.indexOf(customer);
-    }
-
+    // no reasons to have both findCustomer and queryCustomer, can have simply queryCustomer and return Customer
     private int findCustomer (String customerName) {
         for (int i = 0; i<this.customerList.size(); i++) {
             Customer customer = this.customerList.get(i);
@@ -61,7 +61,7 @@ public class Branch {
         return null;
     }
 
-    public Branch createBranch (String name) {
+    public static Branch createBranch (String name) {
         return new Branch (name);
     }
 
@@ -69,7 +69,7 @@ public class Branch {
         System.out.println(this.branchName + "'s list of customers:");
         for (int i = 0; i < this.customerList.size(); i++) {
             Customer customer = customerList.get(i);
-            System.out.println(i + "). " + customer.getName());
+            System.out.println((i + 1) + "). " + customer.getName());
             if (showTransactions) {
                 customer.printTransactions();
             }

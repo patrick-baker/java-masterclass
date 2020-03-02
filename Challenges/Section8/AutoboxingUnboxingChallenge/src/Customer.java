@@ -5,6 +5,8 @@ public class Customer {
     private String name;
     private ArrayList <Double> transactions;
 
+    // makes more sense to put initialAmount as a constructor argument,
+    // and run newTransaction when a new instance of Customer is created
     public Customer(String name) {
         this.name = name;
         this.transactions = new ArrayList<Double>();
@@ -18,7 +20,8 @@ public class Customer {
         return transactions;
     }
 
-    public Customer createCustomer (String name) {
+
+    public static Customer createCustomer (String name) {
         return new Customer (name);
     }
 

@@ -8,8 +8,10 @@ public class Main {
     public static void main(String[] args) {
         addAlbum("The Beatles", "White Album");
         addAlbum("Bon Iver", "Bon Iver, Bon Iver");
-        findAlbum("White Album").addSong("Back In The U.S.S.R", 163);
-        findAlbum("White Album").addSong("Dear Prudence", 235);
+        Album whiteAlbum = findAlbum("White Album");
+
+        whiteAlbum.addSong("Back In The U.S.S.R", 163);
+        whiteAlbum.addSong("Dear Prudence", 235);
         findAlbum("White Album").addSong("Glass Onion", 137);
         findAlbum("White Album").addSong("Ob-La-Di, Ob-La-Da", 188);
         findAlbum("White Album").addSong("Wild Honey Pie", 52);

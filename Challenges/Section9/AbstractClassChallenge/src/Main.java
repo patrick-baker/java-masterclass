@@ -53,6 +53,10 @@ public class Main {
         // a loop as in the example below.
         //
 
+        SearchTree tree = new SearchTree(null);
+
+        tree.traverse(tree.getRoot());
+
         MyLinkedList list = new MyLinkedList(null);
         list.traverse(list.getRoot());
         // Create a string data array to avoid typing loads of addItem instructions:

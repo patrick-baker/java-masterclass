@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.ListIterator;
 
-public class League <T extends Player> {
+public class League <T extends Team> {
 
     private String name;
-    private ArrayList<Team<T>> teams;
+    private ArrayList<T> teams;
 
     public League(String name) {
         this.name = name;
@@ -16,7 +16,7 @@ public class League <T extends Player> {
         return name;
     }
 
-    public boolean addTeam(Team<T> team) {
+    public boolean addTeam(T team) {
         if (teams.contains(team)) {
             System.out.println(team.getName() + " is already on the team.");
             return false;
@@ -27,13 +27,10 @@ public class League <T extends Player> {
         }
     }
 
-    public int numTeams() {
-        return this.teams.size();
-    }
 
     public void printTeams() {
         Collections.sort(teams);
-        ListIterator<Team<T>> listIterator = teams.listIterator();
+        ListIterator<T> listIterator = teams.listIterator();
         boolean quit = false;
         while (!quit) {
             if (!listIterator.hasNext()) {

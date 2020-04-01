@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-	League <FootballPlayer> nfl = new League<>("NFL");
+	League <Team<FootballPlayer>> nfl = new League<>("NFL");
     Team<FootballPlayer> packers = new Team<>("Packers");
     Team<BaseballPlayer> brewers = new Team<>("Brewers");
     Team<SoccerPlayer> galaxy = new Team<>("Galaxy");
